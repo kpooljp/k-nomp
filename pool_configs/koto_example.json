@@ -2,6 +2,10 @@
     "enabled": false,
     "coin": "koto.json",
 
+    "blockIdentifier": "",
+    "_comment_blockIdentifier1": "a string embedded in the block to be mined. Used to identify the pool in Insight etc etc.",
+    "_comment_blockIdentifire2": "If this value equals null string, website.stratumHost in 'config.json' is used.",
+
     "address": "",
     "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
 
@@ -17,8 +21,12 @@
         "": 1.0
     },
 
+    "urlInsight": "",
+    "_comment_urlInsight": "for using non-default insight: e.g. https://koto-insight-testnet.poolof.work for testnet",
+
     "paymentProcessing": {
-	"minConf": 10,
+        "maxUnshieldAmount": 100.0,
+        "minConf": 10,
         "enabled": true,
         "paymentMode": "prop",
         "_comment_paymentMode":"prop, pplnt",
@@ -29,7 +37,11 @@
             "host": "127.0.0.1",
             "port": 8432,
             "user": "username",
-            "password": "password"
+            "password": "password",
+            "maxSockets": 16,
+            "_comment_maxSockets1": "you should setup ~/.koto/koto.conf as: ",
+            "_comment_maxSockets2": "rpcworkqueue=(pool thread number) * daemons.maxSockets + paymentProcessing.daemon.maxSocket(this value)",
+            "_comment_maxSockets3": "e.g. rpcworkqueue=96"
         }
     },
 
@@ -59,7 +71,11 @@
             "host": "127.0.0.1",
             "port": 8432,
             "user": "username",
-            "password": "password"
+            "password": "password",
+            "maxSockets": 16,
+            "_comment_maxSockets1": "you should setup ~/.koto/koto.conf as: ",
+            "_comment_maxSockets2": "rpcworkqueue=(pool thread number) * daemons.maxSockets(this value) + paymentProcessing.daemon.maxSocket",
+            "_comment_maxSockets3": "e.g. rpcworkqueue=96"
         }
     ],
 

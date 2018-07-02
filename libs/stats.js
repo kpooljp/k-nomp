@@ -411,6 +411,7 @@ module.exports = function(logger, portalConfig, poolConfigs){
                         }
                         var coinStats = {
                             name: coinName,
+                            urlInsight: poolConfigs[coinName].urlInsight,
                             symbol: poolConfigs[coinName].coin.symbol.toUpperCase(),
                             algorithm: poolConfigs[coinName].coin.algorithm,
                             hashrates: replies[i + 1],

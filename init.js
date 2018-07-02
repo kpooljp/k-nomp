@@ -166,6 +166,11 @@ var buildPoolConfigs = function(){
         }
 
 
+        if (!poolOptions.blockIdentifier || poolOptions.blockIdentifier == "")
+            if (portalConfig.website && portalConfig.website.stratumHost)
+                poolOptions.blockIdentifier = portalConfig.website.stratumHost;
+        logger.debug('Master', coinProfile.name,"blockIdentifier: " + poolOptions.blockIdentifier)
+
         configs[poolOptions.coin.name] = poolOptions;
 
         if (!(coinProfile.algorithm in algos)){

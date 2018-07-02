@@ -75,6 +75,8 @@ function SetupForPool(logger, poolOptions, setupFinished){
     var getMarketStats = poolOptions.coin.getMarketStats === true;
     var requireShielding = poolOptions.coin.requireShielding === true;
     var fee = parseFloat(poolOptions.coin.txfee) || parseFloat(0.0004);
+    var maxUnshieldAmount = processingConfig.maxUnshieldAmount || 100.0;
+    logger.debug(logSystem, logComponent, "maxUnshieldAmount: " + maxUnshieldAmount);
 
     logger.debug(logSystem, logComponent, logComponent + ' requireShielding: ' + requireShielding);
     logger.debug(logSystem, logComponent, logComponent + ' minConf: ' + minConfShield);
@@ -325,8 +327,8 @@ function SetupForPool(logger, poolOptions, setupFinished){
 
         var amount = satoshisToCoins(zBalance - 10000);
         // unshield no more than 100 KOTO at a time
-        if (amount > 200.0)
-            amount = 200.0;
+        if (amount > maxUnshieldAmount)
+            amount = maxUnshieldAmount;
 
         var params = [poolOptions.zAddress, [{'address': poolOptions.tAddress, 'amount': amount}]];
         daemon.cmd('z_sendmany', params,
