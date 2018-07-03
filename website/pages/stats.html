@@ -179,7 +179,7 @@
 					<small>Block:</small>
                                         {{if (it.stats.pools[pool].urlInsight) { }}
                                                 <a href="{{=it.stats.pools[pool].urlInsight}}/block/{{=block[0]}}" target="_blank">{{=block[2]}}</a>
-					{{ } else {if (String(it.stats.pools[pool].name).startsWith("zcash")) { }}
+					{{ } else if (String(it.stats.pools[pool].name).startsWith("zcash")) { }}
 						<a href="https://explorer.zcha.in/blocks/{{=block[0]}}" target="_blank">{{=block[2]}}</a>
 					{{ } else if (String(it.stats.pools[pool].name).startsWith("zclassic")) { }}
 						<a href="https://classic.zcha.in/blocks/{{=block[0]}}" target="_blank">{{=block[2]}}</a>
