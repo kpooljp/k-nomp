@@ -50,7 +50,7 @@
         "nonce": "1.0.4",
         "redis": "2.7.1",
         "request": "2.81.0",
-        "stratum-pool": "git+https://github.com/yoshuki43/node-stratum-pool-yescrypt.git"
+        "stratum-pool": "git+https://github.com/kpooljp/node-stratum-pool-yescrypt.git"
     },
     "engines": {
         "node": ">=0.10"

@@ -12,9 +12,9 @@
     "vFoundersRewardAddress": [],
     "kotoFoundersReward": [
         {
-            "comment": "for mainnet",
-            "address": "k3EEgqMM8jpaGW6XXUHpv3kDprMfm1x1VEf",
-            "start": 335600,
+            "comment": "for testnet",
+            "address": "k2A4ArX2YAQJ6Qiut7tNNWUhq3Np7Et525K",
+            "start": 93500,
             "last": 1072799
         }
     ],
