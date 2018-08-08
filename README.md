@@ -3,7 +3,7 @@
 This is a Yescrypt mining pool based off of Node Open Mining Portal.
 
 Donations for development are greatly appreciated!
-  * KOTO: k19y88Y2ctSdYN9LNxNocd2RKaq2fPda5pd
+  * KOTO: k1K3tyx67vaKFfKB1x91awzWf4m4V4BuvwF
 
 #### Production Usage Notice
 This is beta software. All of the following are things that can change and break an existing K-NOMP setup: functionality of any feature, structure of configuration files and structure of redis data. If you use this software in production then *DO NOT* pull new code straight into production usage because it can and often will break your setup and require you to tweak things like config files or redis data. *Only tagged releases are considered stable.*
@@ -14,25 +14,37 @@ Usage of this software requires abilities with sysadmin, database admin, coin da
 
 ### Community / Support
 Forum
-* Support / general discussion join: https://discourse.koto.cash/
+* Support / general discussion join: https://discourse.ko-to.org/
 
 Wiki
-* http://koto.cswiki.jp/index.php?FrontPage
+* http://koto-pool.work/wiki/
+
+Discord
+* https://discordapp.com/invite/HmsTDww
 
 If your pool uses K-NOMP let us know and we will list your website here.
 
 ### Some pools using K-NOMP or node-stratum-yescrypt-module:
 
-http://koto.poolof.work:8080/ K-NOMP
+http://jp.kpool.jp/ KPOOL
 
-https://kotopool.work:8080/ kotopool.work
+http://koto.mpool.jp/ MPOOL
 
 http://okoto.xyz/ おコトを少々（okoto.xyz)
 
-http://www.kpool.jp/ kpool.jp
+http://koto.mypool.tokyo/ 俺のプール＠江戸前店
+
+https://koto.ukkey3.space/ 大人の自由研究
+
+https://koto.mofumofu.me/ mofumofu.me
+
+
 
 Usage
 =====
+
+#### HowTo
+* https://qiita.com/hideki8/items/bf38bbec71fc17d64123
 
 
 #### Requirements
@@ -76,7 +88,7 @@ Clone the repository and run `npm update` for all the dependencies to be install
 sudo apt-get install build-essential libsodium-dev npm
 sudo npm install n -g
 sudo n stable
-git clone https://github.com/yoshuki43/k-nomp.git k-nomp
+git clone https://github.com/kpooljp/k-nomp.git k-nomp
 cd k-nomp
 npm update
 npm install
