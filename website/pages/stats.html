@@ -120,6 +120,8 @@
                     <div><i class="fa fa-tachometer"></i><small>Network Hash/s:</small> <span id="statsNetworkSols{{=pool}}">{{=it.stats.pools[pool].poolStats.networkSolsString}}</span></div>
                     <div><i class="fa fa-unlock-alt" aria-hidden="true"></i><small>Difficulty:</small> <span id="statsNetworkDiff{{=pool}}">{{=it.stats.pools[pool].poolStats.networkDiff}}</span></div>
 					<div><i class="fa fa-users"></i><small>Node Connections:</small> <span id="statsNetworkConnections{{=pool}}">{{=it.stats.pools[pool].poolStats.networkConnections}}</span></div>
+                                        <div><i class="fa fa-code-fork" aria-hidden="true"></i><small>Daemon Version:</small> <span id="statsNetworkVersion{
+{=pool}}">{{=it.stats.pools[pool].poolStats.networkVersion}}</span></div>
                 </div>
             </div>
         </div>
